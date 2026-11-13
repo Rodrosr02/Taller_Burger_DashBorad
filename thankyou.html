@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#18382b">
+    <meta
+      name="description"
+      content="Burger: hamburguesas, carrito de compras y pedidos en un solo lugar."
+    >
+    <title>Burger · Comprobante</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="app.js"></script>
+  </head>
+
+  <body>
+    <div class="topbar">
+      HECHAS AL MOMENTO. DISFRUTADAS SIN PRISA.
+      <span>Precios en pesos colombianos · COP</span>
+    </div>
+
+    <header>
+      <a class="brand" href="#menu" aria-label="Burger inicio">
+        <img src="images/logo.png" alt="">
+        <span>BURGER<span class="brand-dot">®</span></span>
+      </a>
+
+      <nav aria-label="Navegación principal" id="navigation"></nav>
+
+      <div class="header-actions">
+        <button class="text-button" data-action="account" id="account-button">
+          Ingresar
+        </button>
+        <button class="cart-button" data-action="cart">
+          Carrito <span id="cart-count">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="app" tabindex="-1">
+      <p class="loading">Preparando algo delicioso…</p>
+    </main>
+
+    <footer>
+      <a class="brand" href="#menu">BURGER<span class="brand-dot">®</span></a>
+      <p>Buena comida. Buenos momentos.</p>
+      <span>Proyecto Burger · Tienda y gestión de pedidos</span>
+    </footer>
+
+    <dialog id="modal" aria-label="Formulario">
+      <div id="modal-content"></div>
+    </dialog>
+
+    <dialog id="cart-dialog" aria-labelledby="cart-title">
+      <div class="drawer-header">
+        <div>
+          <span class="eyebrow">TU PRÓXIMO BUEN MOMENTO</span>
+          <h2 id="cart-title">Tu carrito</h2>
+        </div>
+        <button class="icon-button" data-action="close-cart" aria-label="Cerrar carrito">
+          ×
+        </button>
+      </div>
+      <div id="cart-content"></div>
+    </dialog>
+
+    <div id="toast" role="status" aria-live="polite" hidden></div>
+  </body>
+</html>
+
